@@ -36,6 +36,12 @@ class Producer implements Runnable {
 
                 // Notify the consumer that an item is produced
                 ProducerConsumer.buffer.notify();
+
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
@@ -60,6 +66,12 @@ class Consumer implements Runnable {
 
                 // Notify the producer that an item is consumed
                 ProducerConsumer.buffer.notify();
+
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
 
             }
         }
