@@ -49,7 +49,7 @@ public class SharedResources {
         }
     }
 
-    /* executes the doWork function, while the resource is locked
+    /* executes the doWork function, while the shared-resource is locked
     * the work is executed */
     static class SharedResource {
         public void doWork() {
